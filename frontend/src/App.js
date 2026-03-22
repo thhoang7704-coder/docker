@@ -11,14 +11,14 @@ function App() {
   }, []);
 
   const fetchUsers = () => {
-    fetch('http://localhost:8081/api/users')
+   fetch('https://my-app-backend-vt15.onrender.com/api/users')
       .then(res => res.json())
       .then(data => setUsers(data))
       .catch(() => setMessage('Chua ket noi duoc backend'));
   };
 
   const addUser = () => {
-    fetch('http://localhost:8081/api/users', {
+    fetch('https://my-app-backend-vt15.onrender.com/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email })
