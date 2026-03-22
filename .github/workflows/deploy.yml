@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker images
+        run: docker compose build
+
+      - name: Check backend is built
+        run: docker images | grep docker-backend
+
+      - name: Check frontend is built
+        run: docker images | grep docker-frontend
