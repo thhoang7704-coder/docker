@@ -1,0 +1,7 @@
+frontend/node_modules/
+
+# Backend
+backend/target/
+
+# Docker
+.env
