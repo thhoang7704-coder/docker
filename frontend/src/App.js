@@ -33,8 +33,7 @@ function App() {
 
   return (
     <div style={{ padding: '40px', fontFamily: 'Arial' }}>
-      <h1>React + Spring Boot + PostgreSQL</h1>
-
+<h1>My App v2 - CI/CD da chay tu dong!</h1>
       <div style={{ marginBottom: '20px' }}>
         <h2>Them user moi</h2>
         <input
